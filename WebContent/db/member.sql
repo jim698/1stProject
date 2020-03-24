@@ -1,0 +1,82 @@
+DROP TABLE MEMBER;
+
+CREATE TABLE MEMBER(
+    MID VARCHAR2(50) PRIMARY KEY,
+    MPW VARCHAR2(50) NOT NULL,
+    MNAME VARCHAR2(50) NOT NULL,
+    MTEL VARCHAR2(50),
+    MBIRTH DATE,
+    MEMAIL VARCHAR2(50),
+    MGENDER VARCHAR2(10),
+    MADDRESS VARCHAR2(250),
+    MFAVORITE VARCHAR2(50),
+    MRDATE DATE DEFAULT SYSDATE);
+   
+SELECT * FROM MEMBER;
+
+-- MID 중복체크
+SELECT * FROM MEMBER WHERE MID = 'aaa';
+
+-- INSERT문
+INSERT INTO MEMBER (MID, MPW, MNAME, MTEL, MBIRTH, MEMAIL, MGENDER, MADDRESS, MFAVORITE) VALUES
+    ('a10', '111', '임준호', '010-4894-2484', '1981/09/10', 'sks@naver.com', 'f', '서울시 용산구', '뉴기니아');
+    
+INSERT INTO MEMBER (MID, MPW, MNAME, MTEL, MBIRTH, MEMAIL, MGENDER, MADDRESS, MFAVORITE) VALUES
+    ('b10', '111', '임지훈', '010-2487-8498', '', '' , 'f', '서울시 용산구', '왕관앵무');
+    
+INSERT INTO MEMBER (MID, MPW, MNAME, MTEL, MBIRTH, MEMAIL, MGENDER, MADDRESS, MFAVORITE) VALUES
+    ('c10', '111', '손흥민', '010-4894-2484', '1981/09/10', 'sfsf@google.com', 'm', '서울시 강남구', '코카투');
+    
+INSERT INTO MEMBER (MID, MPW, MNAME, MTEL, MBIRTH, MEMAIL, MGENDER, MADDRESS, MFAVORITE) VALUES
+    ('d10', '111', '메시', '010-2487-8498', '', '' , 'm', '서울시 용산구', '유리앵무');    
+    
+INSERT INTO MEMBER (MID, MPW, MNAME, MTEL, MBIRTH, MEMAIL, MGENDER, MADDRESS, MFAVORITE) VALUES
+    ('e10', '111', '임꺽정', '010-4894-2484', '1981/09/10', 'sks@naver.com', 'f', '서울시 용산구', '청금강');
+    
+INSERT INTO MEMBER (MID, MPW, MNAME, MTEL, MBIRTH, MEMAIL, MGENDER, MADDRESS, MFAVORITE) VALUES
+    ('f11', '111', '루니', '010-2487-8498', '', '' , 'f', '서울시 용산구', '홍금강');
+    
+INSERT INTO MEMBER (MID, MPW, MNAME, MTEL, MBIRTH, MEMAIL, MGENDER, MADDRESS, MFAVORITE) VALUES
+    ('g11', '111', '아자르', '010-4894-2484', '1981/09/10', 'sfsf@google.com', 'm', '서울시 강남구', '코뉴어');
+    
+INSERT INTO MEMBER (MID, MPW, MNAME, MTEL, MBIRTH, MEMAIL, MGENDER, MADDRESS, MFAVORITE) VALUES
+    ('h11', '111', '호날두', '010-2487-8498', '', '' , 'm', '서울시 용산구', '썬코뉴어');    
+    
+-- 로그인 (mID, mPW)    
+SELECT * FROM MEMBER WHERE MID ='aaa' AND MPW ='111';
+
+--세션에 넣기 위해 mId로 member dto가져오기 
+SELECT * FROM MEMBER WHERE MID ='aaa';
+
+--회원정보수정(mPw, mNAME / mEMAIL, mPHOTO, mBIRTH, mADDRESS 수정 가능)
+UPDATE MEMBER SET MPW = '111', MNAME = 'JSP', MTEL='010-3120-1473', MEMAIL = 'wogs@daum.net', MADDRESS='서울시 양천구'
+    WHERE MID = 'aaa';
+
+-- 회원목록(startRow ~ endRow)  
+SELECT * FROM (SELECT ROWNUM RN, A.* FROM (SELECT * FROM MEMBER ORDER BY MRDATE DESC) A) WHERE RN BETWEEN 3 AND 6;
+
+-- 가입한 전체 회원 명수  
+SELECT COUNT(*) FROM MEMBER;
+
+SELECT * FROM MEMBER;    
+COMMIT;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    

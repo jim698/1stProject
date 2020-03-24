@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+section{
+	width:1300px;
+	margin: 0 auto;	
+	border:1px solid red;
+	height:1800px;
+}
+
+#adminLogin_wrap{width:600px; margin: 141px auto; margin-bottom:245px; border: 1px solid #003300; padding:20px; height:327px;}
+#adminLogin_title{
+	width:95%;            		margin:10px auto;
+	padding-bottom:20px;     	border-bottom:1px solid #003300;
+	color:#003300;          	font-size:1.5em;
+	text-align:center;       	font-weight:bold;
+}
+#adminLogin_wrap table{margin:0 auto; color:#003300;}
+#adminLogin_wrap table tr{height:50px; }
+#adminLogin_wrap table th{
+	width:200px;        	font-size:0.9em;
+	color:#003300;      	text-align:left;    	
+}
+#adminLogin_wrap table td {width: 300px; text-align:center;}
+#aid, #apw {
+	border-bottom: 1px solid #003300; height:20px;	width:100%; padding:15px 0;
+	outline:0; font-size: large;
+}
+.adminBtn_style {
+	color: #ffffff;        	background: #f7c377;
+	border:0;               outline: none;
+	width:30%;              padding:5px 0; 
+	margin-top:37px;
+}

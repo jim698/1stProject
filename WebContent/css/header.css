@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+/* 초기화 css */
+@import url('https://fonts.googleapis.com/css?family=Catamaran|Nanum+Pen+Script&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-family: 'Nanum Pen Script', cursive;
+	font-family: 'Catamaran', sans-serif;
+	letter-spacing: 2px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+li {
+	list-style: none;
+}
+
+header {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+}
+
+header #lnb {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	overflow: hidden;
+	background: #f7c377;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+}
+
+#lnb ul {
+	float: right;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-right: 5%;
+}
+
+#lnb ul li {
+	float: left;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 1.1em;
+}
+
+#lnb ul li {
+	font-size: 17px;
+	color: black;
+	font-weight: bold;
+}
+
+#lnb ul li a {
+	font-size: 15px;
+	color: white;	
+}
+
+header #logo {
+	text-align: center;
+	margin-top: 70px;
+}
+
+header #logo img {
+	width: 300px;
+	height: auto;
+}
+
+#gnb {
+	width: 1300px;
+	text-align: center;
+	margin: 20px auto;
+}
+
+#gnb ul {
+	overflow: hidden;
+	margin: 0 auto;
+	border: 1px solid gray;
+}
+
+#gnb ul li {
+	float: left;
+	width: 140px;
+	font-size: 1.1em;
+	border: 1px solid gray;
+	margin: 8px 10px;
+	height: 35px;
+	line-height: 35px;
+}
+
+/* 유석 bro 왼쪽 등장 css  */
+#lnb_menubtn {
+	position: absolute;
+	top: 10px;
+	left: 1%;
+	float: left;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+#lnb_menubtn span {
+	width: 100%;
+	height: 2px;
+	margin: 7px 0;
+	background: white;
+	display: block;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: -100%;
+	height: 100%;
+	width: 20%;
+	background: #f7c377;
+	z-index: 99999;
+	transition: .5s;
+}
+
+nav.open {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 20%;
+	background: #f7c377;
+	z-index: 99999;
+	transition: .5s;
+}
+
+#close_nav {
+	position: absolute;
+	top: 10px;
+	right: 5%;
+	float: left;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+#close_nav span {
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	top: 14px;
+	background: white;
+	display: block;
+}
+
+#close_nav span:first-child {
+	transform: rotate(45deg);
+}
+
+#close_nav span:last-child {
+	transform: rotate(-45deg);
+}
+
+#nav_gnb {
+	position: absolute;
+	top: 24%;
+	width: 80%;
+	left: 10%;
+}
+
+#nav_gnb li {
+	position: relative;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	margin: 20px 0;
+}
+
+#nav_gnb li a {
+	color: #fff;
+	font-size: 15pt;
+	
+}
+
+
+
+/* 앵무 fixed 관련 ~! */
+
+
+#parrot3bro ul {
+	position: fixed;
+	bottom: 5%;
+	right: 68px;
+}
+
+#parrot3bro ul li {
+	margin-bottom: 10px;
+	border: 3px solid #ea9303;
+	border-radius: 50% 50% 0 0;
+	overflow: hidden;
+	width: 100px;
+	cursor: pointer;
+}
+
+#parrot3bro ul li img {
+	float: left;
+	width: 100%;
+}
